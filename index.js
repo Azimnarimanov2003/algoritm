@@ -29,7 +29,7 @@
 
 
 // 1-masala
-// let raqam = prompt('raqamni kiriting')
+// let raqam = prompt("raqamni kiriting')
 // if(raqam%2 ==0 ) {
 //     console.log((raqam*raqam))
 // }
@@ -878,22 +878,715 @@
 // 1 dan N ga sonlar bo’lgan juft va toqlar sonlar yig’indisini 
 // qaytaruvchi sumOddEven(N) nomli funksiya hosil qiling. QYM
 // sumOddEven(10) => 30, 25
-function sumOddEven(N) {
-  let juftSonYigindisi = 0;
-  let toqSonYigindisi = 0;
-  for(let i = 1;  i <= N; i++){
-if ( i % 2 === 0){
-  juftSonYigindisi += i;
-}
-else{
-  toqSonYigindisi += i;
-}
-}
-return [juftSonYigindisi, toqSonYigindisi];
-}
-console.log(sumOddEven(10));
+// function sumOddEven(N) {
+//   let juftSonYigindisi = 0;
+//   let toqSonYigindisi = 0;
+//   for(let i = 1;  i <= N; i++){
+// if ( i % 2 === 0){
+//   juftSonYigindisi += i;
+// }
+// else{
+//   toqSonYigindisi += i;
+// }
+// }
+// return [juftSonYigindisi, toqSonYigindisi];
+// }
+// console.log(sumOddEven(10));
+
+
+
+// Array 1-misol
+// n natural soni berilgan. Dastlabki n ta toq sondan 
+// tashkil topgan massiv qaytaruvchi getInitialOdds(n) nomli funksiya tuzing.
+// Input: getInitialOdds(5)
+ // Output: [1, 3, 5, 7, 9]
+// function getInitialOdds(n){
+//   let array = [];
+//   for(let i=1; i<=2*n; i++){
+//       if(i%2!==0){
+//           array.push(i)
+//       }
+//   }
+//   console.log(array)
+// }
+// getInitialOdds(9)
+
+// 2-misol
+// arr nomli massiv berilgan. Massiv elementlari orasidan
+//  juftlarini indekslari kamayish tartibidan hosil bo’lgan
+//   massivni qaytaruvchi getEvenReverse(arr) programma tuzilsin.
+// Input: [4, 5, 7, 8, 6, 9]
+// Output: [6, 8, 4]
+
+// function getEvenReverse(n){
+//   let array = [];
+//   for(let i = 1; i <= n; i++ ){
+//     if(i % 2 === 0){
+//       array.push(i)
+//     }
+//   }
+// console.log(array.reverse());
+// }
+// getEvenReverse(10)
+
+// function butun(n){
+//     let array=[];
+//     for(let i=1;i<=n;i++){
+//         if(i%2===0){
+//           array.push(i)
+//         }
+//     }
+//     console.log(array.reverse())
+// }
+// butun(10)
+
+// 3 -misol
+// n ta elementdan tashkil topgan massiv berilgan.
+//  Massiv elementlarini quyidagicha chiqaruvchi programma tuzilsin.
+// A[0], A[n-1], A[1], A[n-2], A[2], A[n-3],...
+// Input:  [4, 5, 7, 8, 6, 9]
+// Output: 4, 9, 5, 6, 7, 8, 8, 7, 6, 5, 9, 4
+
+// const arr = [4, 5, 7, 8, 6, 9];
+//  const result = [];
+//  for( let i = 0 ; i < arr.length; i ++){
+// result.push(arr[i]);
+// result.push(arr[arr.length-i-1])
+//  }
+// console.log(result);
+
+// 4-misol
+// N ta elementdan tashkil topgan arr nomli massiv 
+// va K, L butun sonlari berilgan. (0 <= K <= L < N).
+//  Massivning K va L indekslari orasidagi elementlari yig'indisini
+//   chiqaruvchi rangeSum(arr, K, L) programma tuzilsin.
+// Input: arr = [1, 6, 9, 5, 8, 10, 15];
+// Ouput: rangeSum(arr, 2, 5) => 32
+// function rangeSum( arr, K, L){
+  //  let sum = 0;
+
+  //  for (let i = K; i <= L; i++){
+  //   sum += arr[i]
+  //  }
+  //  return sum;
+  // }
+  // const arr = [1, 6, 9, 5, 8, 10, 15];
+  // let K = 2;
+  // let L = 5;
+  // console.log(rangeSum(arr, K, L));
+    // 5-misol
+//     Array5. n ta elementdan tashkil topgan massiv berilgan.
+//      Massivda qatnashgan sonlardan faqat bittadan chiqaruvchi 
+//      getSingleArr(arr) tuzilsin.
+// Input: let arr =  [7, 4, 2, 3, 1, 4, 5, 2, 4, 5, 7]
+// Output: [7, 4, 2, 3, 1, 5]
+// function getSingleArr(arr) {
+//   let res = 0;
+//   let set = new Set(arr);
+//   res = [...set];
+//   return res;
+// }
+
+// arr =  [7, 4, 2, 3, 1, 4, 5, 2, 4, 5, 7];
+// console.log(getSingleArr(arr));
+
+// function getSingleArr(arr){
+//     let res = 0;
+//     let resalt = new Set(arr)
+//     res = [...resalt]
+//     return res
+  
+// }
+// arr =  [7, 4, 2, 3, 1, 4, 5, 2, 4, 5, 7];
+//  console.log(getSingleArr(arr));
+
+//6-misol
+// n ta elementdan iborat massiv berilgan. 
+// Massivning eng kichik va eng katta elementlari topilsin va o'rni almashtirilsin.
+// Input: [7, 4, 9, 2, 3, 1, 5]
+// Output:
+// Max: 9
+// Min: 1
+// [7, 4, 1, 2, 3, 9, 5]
+
+
+// 
+// let max = Math.max(...arr);
+// let min = Math.min(...arr);
+// let minindex = 0;
+// let maxindex = 0;
+// for(let i = 0; i <= arr.length; i++){
+//   if( arr[i] === max){
+//     maxindex = i;
+//   }
+//   else if ( arr[i] === min ){
+//     minindex = i;
+//   }
+
+// }
+// [ arr[maxindex], arr[minindex]] = [ arr[minindex], arr[maxindex]]
+// console.log(arr);
+
+//7-misol
+// n ta elementdan tashkil topgan berilgan.
+//  Massiv elementlarini 1 ta o'rin ongga siklik siljituvchi programma
+//   tuzilsin. a[0] element qiymati a[1] ga o'tadi, a[1] esa a[2] ga, ...,
+//    a[n – 1] qiymati a[0] ga o'tadi.
+// Input: [1, 5, 8, 9, 10]
+// Output: [5, 8, 9, 10, 1]
+// let arr = [1, 5, 8, 9, 10];
+// let resalt = [];
+// for ( let i = 1; i < arr.length; i ++){
+//   resalt.push(arr[i])
+// }
+// resalt.push(arr[0])
+// console.log(resalt);
 
 
 
 
 
+
+
+
+//uyga vazifa 
+// 1-misol
+// n natural soni berilgan. 2 sonining dastlabki n ta darajasidan 
+//tashkil topgan massivni qaytaruvchi getLevel2(n) nomli funksiya tuzing.
+// Input: 5
+// Output: [2, 4, 16, 32, 62]
+// function getLevel2(n){
+//   let daraja = [];
+//   for(let i = 1; i <= n; i++){
+//     daraja.push(Math.pow(2, i));
+//   }
+//   return daraja 
+// }
+// console.log(getLevel2(5));
+
+  
+
+// n ta elementdan tashkil topgan massiv berilgan.
+//  Uning elementlarini teskari tartibda chiqaruvchi programma tuzilsin.
+
+// 3-misol  
+
+// function teskariTartib(arr) {
+//   for (let i = arr.length - 1; i >= 0; i--) {
+//       console.log(arr[i]);
+//   }
+// }
+// // Test qilish uchun:
+// const array = [1, 2, 3, 4, 5];
+// console.log(teskariTartib(array))
+
+// 4-misol
+// n ta elementdan tashkil topgan massiv berilgan. 
+// Massiv elementlari orasidan toqlarini indekslari o'sish 
+// tartibida chiqaruvchi va ularning sonini chiqaruvchi programma tuzilsin.
+// Massiv elementlar: 4 5 7 8 6 9
+//Natija: 5 7 9 toqlar soni = 3
+
+//    function  massiv(arr){
+//   let toqRaqamlar = [];
+//   let soni = 0 ;
+//   for (let i = 0; i <= arr.length; i++){
+//     if(arr[i] % 2 !== 0) {
+//       soni++ ;
+//       toqRaqamlar.push(arr[i]);
+//     }
+//   }
+// console.log("Massiv elementlar: " + arr.join(" "));
+// console.log("Natija: " + toqRaqamlar.join(" ") + " toqlar soni = " + soni);
+// }
+// const arr = [4, 5, 7, 8, 6, 9,5,45,35,24];
+// massiv(arr);
+// function massiv(arr){
+//   let toqlari = [];
+//   let soni = 0;
+//   for(let i = 0; i <= arr.length; i++){
+//     if ( arr[i] % 2 !== 0){
+//       soni ++;
+//       toqlari.push(arr[i]);
+
+//     }
+//   }
+//   console.log( "massiv elementlar :" + arr.join("  "));
+//   console.log("natija  " + toqlari.join(" ")  + "toqlari soni =   " + soni )
+// }
+// const arr = [ 23, 4, 533, 34 , 34,3,6,7,9]
+// massiv(arr)
+
+
+// n ta elementdan tashkil topgan massiv berilgan.
+//  Dastlab massiv elementlari orasidan juftlarini indekslari
+//   o'sish tartibida chiqaruvchi, keyin massiv elementlari orasidan 
+//   toqlarini indekslari kamayish tartibida chiqaruvchi programma tuzilsin.
+// Massiv elementlar: 4 5 7 8 6 9
+// Natija: 4 8 6 9 7 5
+// function printEvenThenOdd(arr) {
+//   let evenIndices = [];
+//   let oddIndices = [];
+
+//   // Juftlar indekslari
+//   for (let i = 0; i < arr.length; i++) {
+//       if (i % 2 === 0) {
+//           evenIndices.push(arr[i]);
+//       } else {
+//           oddIndices.push(arr[i]);
+//       }
+//   }
+
+//   // Juftlar chiqarish
+//   console.log("Juftlar:");
+//   console.log(evenIndices.join(" "));
+// }
+ 
+// // Test
+// const arr = [4, 5, 7, 8, 6, 9];
+// console.log("Massiv elementlar: " + arr.join(" "));
+// console.log("Natija:");
+// printEvenThenOdd(arr);
+
+// // 
+//  function massiv( N){
+//   let   x = prompt('x ni kiriting ')
+//   for(let i = 0; i <= x; i++){
+//     x += N;
+//     return  x;
+
+//   }
+
+//  }
+// console.log(x);
+// let a = prompt( ' belgini kiriting');
+// let b = prompt( ' sonini kiriring');
+// let belgilar = 0;
+// for ( let i = 0; i <= b; i++){
+  
+// belgilar +=i;
+// }
+// console.log(belgilar);
+
+
+// 9- misol
+// const arr = [7, 4, 1, 2, 3, 9, 5]
+//  let max = Math.max(...arr);
+// let min = Math.min(...arr);
+// let minindex = 0;
+// let maxindex = 0;
+// for(let i = 0; i <= arr.length; i++){
+//   if( arr[i] === max){
+//     maxindex = i;
+//   }
+//   else if ( arr[i] === min ){
+//     minindex = i;
+//   }
+
+
+// }
+// [ arr[maxindex], arr[minindex]] = [ arr[minindex], arr[maxindex]]
+// console.log(arr);
+
+// 10 - misol
+//  function massiv(arr, b){
+//   let kupaytma = 1;
+//   let yigindi = 0;
+//   let ayirma = 0;
+//   for (let i = arr; i <= b; i++){
+//     if ( i % 2 === 0){
+//     kupaytma *= i;
+//     yigindi += i;
+//     ayirma = kupaytma - ayirma;
+//     }
+//   }
+//   return [kupaytma, yigindi, ayirma]
+//  }
+//  console.log(massiv(87, 100));
+
+// 8-misol 
+// function getSingleArr(arr) {
+//   let res = 0;
+//   let set = new Set(arr);
+//   res = [...set];
+//   return res;
+// }
+
+// arr =  [7, 4, 55, 77,77,77, 2, 3, 1, 4, 5, 2, 4, 5, ,1,];
+// console.log(getSingleArr(arr));
+
+// 5-misol
+// function sumOddEven(N){
+//   let juftson = 0;
+//   let toqson = 0;
+  
+//   for( let i = 7; i <= N; i ++){
+//     if ( i % 2 === 0){
+//     juftson += i;
+
+//     }
+//     else{
+//       toqson  += i;
+//     }
+   
+//   }
+//   return [ juftson, toqson]
+  
+// }
+// console.log(sumOddEven(17));
+// 1-misol 
+
+// function massiv(arr,N){
+//   let belgi = 0;
+//   let soni = 0;
+//   for(let i = 0; i <= N; i ++){
+//     soni += i;
+//     // belgi += soni;
+//   }
+// return [belgi, soni ]
+// }
+// console.log(massiv(A,3));
+
+
+
+// Quyidagi massivdagi barcha odamlarni
+//  yoshlarining o’rtacha qiymatini chiqaruvchi getAverageAge(arr) nomli funksiya yozing.
+
+// Input: const people = [
+//   { name: "Abdulaziz", age: 33 },
+//   { name: "Erkin", age: 22 },
+//   { name: "Temur", age: 34 },
+//   { name: "Sardor", age: 20 },
+// ];
+// Output: 27.25
+// function getAverageAge(arr){
+//   let  urtachasi = 0;
+//   for(let  i = 0; i < arr.length; i++){
+//     urtachasi += arr[i].age;
+//   }
+
+// return urtachasi / arr.length;
+// }
+// const people = [
+//     { name: "Abdulaziz", age: 33 },
+//     { name: "Erkin", age: 22 },
+//     { name: "Temur", age: 34 },
+//     { name: "Sardor", age: 20 },
+//   ];
+
+//   console.log(getAverageAge(people));
+
+//   Massiv ichidagi har bir objectga isMarried nomli property qo’shilsin.
+//    Agar object yoshi 25 dan kichi bo’lsa isMarried ga false, 
+//    aks holda true qiymat o’zlashtirilsin.
+
+// 	Output: [
+//   { name: "Abdulaziz", age: 33, isMarried: true},
+//   { name: "Erkin", age: 22, isMarried: false },
+//   { name: "Temur", age: 34, isMarried: true },
+//   { name: "Sardor", age: 20, isMarried: false },
+// ];
+// function isMarried(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i].age >= 25) {
+//       arr[i].isMarried = true;
+//     } else {
+//       arr[i].isMarried = false;
+//     }
+//   }
+//   return arr;
+// }
+
+// const people =  [
+//   { name: "Abdulaziz", age: 33},
+//   { name: "Erkin", age: 22},
+//   { name: "Temur", age: 34},
+//   { name: "Sardor", age: 20},
+// ];
+
+// console.log(isMarried(people));
+
+
+
+//3-misol
+// . n ta elementdan tashkil topgan arr nomli massiv berilgan.
+//  Massiv juft indeksli elementlari orasidan kichigini aniqlovchi
+//   getOddMin(arr) nomli funksiya tuzilsin.
+// function getOddMin(arr){
+//   let min = Infinity;
+//   for(let i = 0; i <= arr.length; i +=2){
+//     if( arr[i] < min ){
+//       min = arr[i];
+//     }
+//   }
+//   return min;
+// }
+// const arr = [ 3,4,5,56,7,7,7];
+// console.log(getOddMin(arr));
+
+// 13-misol
+
+// Array14. n ta elementdan tashkil topgan arr nomli massiv berilgan.
+//  Massiv toq indeksli elementlari orasidan kattasini aniqlovchi getEvenMax(arr) tuzilsin.
+// function getEvenMax(arr){
+//    let max = -Infinity;
+//    for(let i = 1; i < arr.length; i +=2 ){
+//     if( arr[i] > max) {
+//       max = arr[i] 
+//     }
+//    }
+//    return max;
+// }
+// const  arr = [ 23,32,4,55,5]
+// console.log(getEvenMax(arr));
+
+
+// Quyidagi objectlardan tuzilgan massiv ichidagi yoshi 
+// eng katta va yoshi eng kichik bo’lgan insonning ismlarini qaytaruvchi
+//  getNameMaxMinAge(arr) nomli funksiya yozing. (for)
+
+// 	Output: ["Temur", "Sardor"]
+
+
+
+
+
+// function getNameMaxMinAge(arr) {
+//     if (arr.length === 0) {
+//       return [];
+//     }
+    
+//     let maxYosh = arr[0];
+//     let minYosh = arr[0];
+    
+//     for (let i = 1; i < arr.length; i++) {
+//       if (arr[i].age > maxYosh.age) {
+//         maxYosh = arr[i];
+//       }
+//       if (arr[i].age < minYosh.age) {
+//         minYosh = arr[i];
+//       }
+//     }
+    
+//     return [maxYosh.name, minYosh.name];
+//   }
+  
+//   const odamlar = [
+//     { name: "Abdulaziz", age: 33 },
+//     { name: "Erkin", age: 22 },
+//     { name: "Temur", age: 34 },
+//     { name: "Sardor", age: 20 },
+//   ];
+  
+//   const res = getNameMaxMinAge(odamlar);
+//   console.log(res);
+
+
+// Quyidagi objectni outputdagi ko'rinishda chiqaring. (toString, join)
+
+// Input: 
+// const me = {
+//   firstName: "Abdulaziz",
+//   lastName: "Toshpulatov",
+//   age: 23,
+//   languages: ["js", "python", "c++", "nodejs"],
+//   friends: ["Jamshid", "Abbos", "Jalol", "Mar'uf"],
+// };
+// Output:
+// firstName: Abdulaziz
+// lastName: Toshpulatov
+// age: 23
+// languages: js,python,c++,nodejs
+// friends: Jamshid+Abbos+Jalol+Maruf
+
+// const me = {
+//   firstName: "Abdulaziz",
+//   lastName: "Toshpulatov",
+//   age: 23,
+//   languages: ["js", "python", "c++", "nodejs"],
+//   friends: ["Jamshid", "Abbos", "Jalol", "Mar'uf"],
+// };
+
+// const languagesString = me.languages.join(",");
+// const friendsString = me.friends.join("+");
+
+// console.log(`firstName: ${me.firstName}`);
+// console.log(`lastName: ${me.lastName}`);
+// console.log(`age: ${me.age}`);
+// console.log(`languages: ${languagesString}`);
+// console.log(`friends: ${friendsString}`);
+
+
+// const me = {
+//   firstName: "Abdulaziz",
+//   lastName: "Toshpulatov",
+//   age: 23,
+//   languages: ["js", "python", "c++", "nodejs"],
+//   friends: ["Jamshid", "Abbos", "Jalol", "Mar'uf"],
+// };
+
+// const languagesString = me.languages.join(",")
+// const friendsString = me.friends.join("+")
+
+
+// console.log(`firstName : ${me.firstName}`);
+// console.log(`lastName : ${me.lastName}`)
+// console.log(`age: ${me.age}`);
+// console.log(`languages: ${languagesString}`);
+// console.log(`friends: ${friendsString}`);
+
+// Kalitlari 1 dan n gacha bo’lganlar sonlarga, qiymatlari esa 
+// o’sha sonlarning kvatratiga teng object hosil qiling. (for)
+
+// Input: 5
+// Output: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+// function createSquareObject(n) {
+//   const squareObject = {};
+// for ( let i = 1; i <= n; i ++){
+//   squareObject[i] = i * i;
+// }
+// return squareObject ;
+
+// }
+// const n = 5;
+// const result = createSquareObject(n);
+// console.log(result);
+// function createSquareObject(n){
+//  let  squareObject = {}
+//   for(let i = 1; i <= n; i ++){
+//     squareObject[i] = i * i;
+//   }
+//   return squareObject;
+// }
+
+// console.log(createSquareObject(7));
+// 2-misoldan hosil bo’lgan objectning kalitlari va qiymatlari yig’indisini toping.
+//  (Object.keys(), Object.values())
+// function createSquareObject(n){
+//    let  squareObject = {}
+//    let objectkeys = 0;
+//    let objectvalues = 0;
+//     for(let i = 1; i <= n; i ++){
+//       squareObject[i] = i * i;
+//       objectkeys += squareObject[i];
+//       objectvalues += i;
+//     }
+//     return [ squareObject, objectkeys, objectvalues]
+//   }
+  
+//   console.log(createSquareObject(3));
+
+// 4-misol
+//  massivi berilgan. Shunday object hosil qilingki, 
+// o’sha objectning kalitlari massiv elementlaridan va qiymatlari
+//  esa ularning uzunligidan iborat bo’lsin. (for)
+
+// Input: ["Abdulaziz", "Safarmurod", "O’rol", "Jahongir"]
+// Output: {"Abdulaziz": 9, "Safarmurod": 10, "O’rol": 5, "Jahongir": 8}
+  
+// function createLengthObject(arr) {
+//   const lengthObject = {};
+//   for (let i = 0; i < arr.length; i++) {
+//     lengthObject[arr[i]] = arr[i].length;
+//   }
+//   return lengthObject;
+// }
+
+// const strings = ["Abdulaziz", "Safarmurod", "O’rol", "Jahongir"];
+// const result = createLengthObject(strings);
+// console.log(result);
+
+// function createLengthObject(arr){
+//   const lengthObject = {} ;
+//   for ( let i = 0; i < arr.length; i ++){
+//     lengthObject[arr[i]] = arr[i].length;
+//   }
+//   return lengthObject;
+// }
+// const strings = [ "jigbo", "iatehb" ] ;
+// const result = createLengthObject(strings);
+// console.log(result);
+
+
+// Shunday object berilganki, uning kalitlari mahsulotlardan va 
+// qiymatlari esa ularning narxlaridan tuzilgan. Barcha mahsulot
+//  qancha turishini toping. (Object.values())
+
+// Input: {"Apelsin": 10000, "Olma": 12000, "Mandarin": 8000, "Banan": 20000}
+// Output: 50000
+
+// function createFruktesMoney(arr){
+
+//   let FruktesMoney = 1;
+//   for(let i = 1; i < arr.length; i++){
+//     FruktesMoney += arr[i]
+//   }
+//   return FruktesMoney
+// }
+//   const strings = {"Apelsin": 10000, "Olma": 12000, "Mandarin": 8000, "Banan": 20000}
+//    const result = createFruktesMoney(strings);
+//    console.log(result);
+
+//    const products = {"Apelsin": 10000, "Olma": 12000, "Mandarin": 8000, "Banan": 20000};
+// let total = 0;
+
+// for (let key in products) {
+//   total += products[key];
+// }
+
+// console.log(total);
+
+
+
+// const boxcontent = document.querySelector(".box");
+
+// boxcontent.addEventListener("click", (event) =>{
+
+// boxcontent.style.color = "red"
+// boxcontent.style.borderRadius = "30px"
+// boxcontent.style.border = "3px solid red"
+// boxcontent.textContent = "whatsapp"
+// })
+
+// const Btn = document.querySelector(".Btn");
+// const first = document.querySelector(".first");
+// const ayiruv = document.querySelector(".Btnayiruv");
+// const kopaytma = document.querySelector(".Btnkopaytiruv");
+// const boluv = document.querySelector(".Btnboluv");
+// const second = document.querySelector(".second");
+// const result = document.querySelector(".natija");
+
+// Btn.addEventListener( "click" , (e) =>  {
+// e.preventDefault()
+// const natija = (first.value-0) + (second.value-0)
+// result.textContent = natija
+
+// }
+
+// )
+
+// ayiruv.addEventListener( "click" , (e) =>  {
+//   e.preventDefault()
+//   const natija = (first.value-0) - (second.value-0)
+//   result.textContent = natija
+  
+//   }
+  
+//   )
+//   kopaytma.addEventListener( "click" , (e) =>  {
+//     e.preventDefault()
+//     const natija = (first.value-0) * (second.value-0)
+//     result.textContent = natija
+    
+//     }
+    
+//     )
+//     boluv.addEventListener( "click" , (e) =>  {
+//       e.preventDefault()
+//       const natija = (first.value-0) / (second.value-0)
+//       result.textContent = natija
+      
+//       }
+      
+//       )
